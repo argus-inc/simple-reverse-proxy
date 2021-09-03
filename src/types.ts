@@ -6,7 +6,12 @@ export interface Config {
     hasSSL?: boolean,
     pathCertificate: string
     pathPrivateKey: string
-    environment: 'local' | 'dev' | 'live'
+    environment: 'local' | 'dev' | 'live',
+
+}
+
+export interface Server {
+
 }
 
 // const config = {
