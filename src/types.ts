@@ -1,17 +1,17 @@
-import { config } from "process";
-
 export interface Config {
     port: number
     hostname: string
     hasSSL?: boolean,
-    pathCertificate: string
-    pathPrivateKey: string
+    pathCertificate?: string
+    pathPrivateKey?: string
     environment: 'local' | 'dev' | 'live',
+    servers: Server[]
 
 }
 
 export interface Server {
-
+    route: string
+    destination: string
 }
 
 // const config = {

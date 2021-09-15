@@ -1,0 +1,12 @@
+{
+    "port": 8070,
+    "hostname": "proxy.myapp.com",
+    "hasSSL": false,
+    "environment": "local",
+    "servers": [
+        {
+            "route": "/test",
+            "destination": "http://localhost:3000"
+        }
+    ]
+}
