@@ -6,7 +6,6 @@ export interface Config {
     pathPrivateKey?: string
     environment: 'local' | 'dev' | 'live',
     servers: Server[]
-
 }
 
 export interface Server {

@@ -5,8 +5,8 @@
     "environment": "local",
     "servers": [
         {
-            "route": "/test",
-            "destination": "http://localhost:3000"
+            "route": "/test/*",
+            "destination": "http://localhost:8000"
         }
     ]
 }
