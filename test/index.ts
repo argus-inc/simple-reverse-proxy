@@ -25,12 +25,12 @@ const PORT = 8000;
 // });
 
 app.get('/', (req, res) => res.send('Express + TypeScript Server'));
+
+app.get('/test/plop', (req, res) => res.send('test/plop route'));
 app.get('/test/:next', (req, res) => {
     console.log(req.params.next)
     res.send('test route')
 });
-app.get('/test/plop', (req, res) => res.send('test/plop route'));
-
 app.listen(PORT, () => {
     console.log(`Listening on ${PORT}`)
 });
