@@ -9,7 +9,7 @@ import { Config } from './types'
 const proxyServer = express();
 //const PORT = 5000;
 
-export class Proxit {
+export class SimpleReverseProxy {
     config: Config
     proxyServer: any
     apiProxy: httpProxy
@@ -89,82 +89,3 @@ export class Proxit {
     }
 
 }
-
-// const config = {
-//     port: 5000,
-//     hostname: 'pigstech.pixiumdigital.com',
-//     hasSSL: false,
-//     cert: '/etc/ssl/fullchain.crt',
-//     key: '/etc/ssl/privkey.pem',
-//     environment: 'local'
-// }
-
-// const config = {
-//     port: 5000,
-//     hostname: 'pigstech.pixiumdigital.com',
-//     server: 'localhost:3000',
-//     hasSSL: true,
-//     cert: '/var/ssl/fullchain.pem',
-//     key: '/var/ssl/privkey.pem',
-//     environment: 'live'
-// }
-
-// let credentials = {}
-
-// if (config.hasSSL) {
-//     const privateKey = fs.readFileSync(config.key, 'utf8');
-//     const certificate = fs.readFileSync(config.cert, 'utf8');
-//     credentials = { key: privateKey, cert: certificate };
-
-// }
-
-
-// const hostname = (req: any, res: any, next: any) => {
-//     if (config.environment !== "live") {
-//         return next()
-//     }
-//     if (req.hostname === config.hostname) {
-//         return next()
-//     } else {
-//         res.sendStatus(401);
-//     }
-// }
-
-// const apiProxy = httpProxy.createProxyServer({
-//     //ignorePath: true,
-// });
-
-// const serverOne = 'http://localhost:3000'
-
-//proxyServer.use(urlencoded({ extended: true }));
-//@ts-ignore
-// proxyServer.options('*', cors()) // include before other routes
-// proxyServer.use(cors());
-// proxyServer.use(morgan('common'));
-// proxyServer.disable('etag');
-// proxyServer.all('*', hostname);
-
-
-// proxyServer.all("/*", (req: any, res: any) => {
-//     console.log('redirecting to Server1');
-//     apiProxy.web(req, res, { target: serverOne });
-// });
-
-// app.all("/app2/*", function(req, res) {
-//     console.log('redirecting to Server2');
-//     apiProxy.web(req, res, {target: ServerTwo});
-// });
-
-// app.all("/app2/*", function(req, res) {
-//     console.log('redirecting to Server3');
-//     apiProxy.web(req, res, {target: ServerThree});
-// });
-
-//proxyServer.get('/', (req, res) => res.send('Express + TypeScript Server'));
-
-
-
-
-// proxyServer.listen(PORT, () => {
-//     console.log(`Listening on ${PORT}`)
-// });

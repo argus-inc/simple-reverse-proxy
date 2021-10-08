@@ -1,16 +1,28 @@
 {
-  "name": "simple-reverse-proxy",
+  "name": "@argus-inc/simple-reverse-proxy",
   "version": "0.0.1",
-  "main": "src/index.ts",
-  "author": "Burlet Mederic <mederic.burlet@gmail.com>",
-  "license": "MIT",
-  "private": true,
+  "main": "lib/SimpleReverseProxy.js",
+  "types": "lib/SimpleReverseProxy.d.ts",
+  "author": {
+    "name": "Burlet Mederic",
+    "email": "mederic.burlet@gmail.com",
+    "url": "https://github.com/crimson-med/"
+  },
+  "license": "GPL-3-0-only",
+  "private": false,
+  "files": [
+    "lib/**/*"
+  ],
+  "bin": {
+    "simple-reverse-proxy": "lib/Cli.js"
+  },
   "devDependencies": {
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
     "@types/http-proxy": "^1.17.7",
     "@types/morgan": "^1.9.3",
     "@types/node": "^16.7.9",
+    "@types/yargs": "^17.0.3",
     "ts-node": "^10.2.1",
     "typescript": "^4.4.2"
   },
@@ -18,10 +30,25 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "http-proxy": "^1.18.1",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "yargs": "^17.2.1"
   },
+  "keywords": [
+    "node",
+    "proxy",
+    "reverse",
+    "hacking",
+    "cyber",
+    "security",
+    "reverse proxy"
+  ],
   "scripts": {
     "dev": "ts-node src/index.ts",
-    "tes": "ts-node test/index.ts"
+    "build": "tsc",
+    "prepare": "yarn build",
+    "tes": "ts-node test/index.ts",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags",
+    "patch": "npm version patch && npm publish --access public"
   }
 }
