@@ -1,3 +1,6 @@
+![npm (scoped)](https://img.shields.io/npm/v/@argus-inc/simple-reverse-proxy) ![npm](https://img.shields.io/npm/dm/@argus-inc/simple-reverse-proxy%20TypeScript%20icon,%20indicating%20that%20this%20package%20has%20built-in%20type%20declarations) ![GitHub Sponsors](https://img.shields.io/github/sponsors/crimson-med)
+
+
 # Simple Reverse Proxy
 
 This library makes it easy to configure multiple reverse proxies with a single config file.
